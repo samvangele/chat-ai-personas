@@ -22,6 +22,17 @@ To use a persona in Chat AI, simply add the link to the JSON file in the import 
 https://chat-ai.academiccloud.de/chat?import=https://raw.githubusercontent.com/gwdg/chat-ai-personas/refs/heads/main/gwdg-support.json
 ```
 
+Alternatively, pass the JSON as data URI, e.g. in a bookmark for a custom persona:
+
+```
+# plain
+https://chat-ai.academiccloud.de/chat/?import=data:application/json,{ "title": "Helpful Assistant", "temperature": 0.5, "top_p": 0.5, "enable_tools": false, "model": "qwen3-32b", "model-name": "Qwen 3 32B", "messages": [ { "role": "system", "content": "You are a helpful assistant." } ] }
+# base64-encoded
+https://chat-ai.academiccloud.de/chat/?import=data:application/json;base64,eyAidGl0bGUiOiAiSGVscGZ1bCBBc3Npc3RhbnQiLCAidGVtcGVyYXR1cmUiOiAwLjUsICJ0b3BfcCI6IDAuNSwgImVuYWJsZV90b29scyI6IGZhbHNlLCAibW9kZWwiOiAicXdlbjMtMzJiIiwgIm1vZGVsLW5hbWUiOiAiUXdlbiAzIDMyQiIsICJtZXNzYWdlcyI6IFsgeyAicm9sZSI6ICJzeXN0ZW0iLCAiY29udGVudCI6ICJZb3UgYXJlIGEgaGVscGZ1bCBhc3Npc3RhbnQuIiB9IF0gfQ==
+# url-encoded
+https://chat-ai.academiccloud.de/chat/?import=data:application/json,%7B%20%22title%22%3A%20%22Helpful%20Assistant%22%2C%20%22temperature%22%3A%200.5%2C%20%22top_p%22%3A%200.5%2C%20%22enable_tools%22%3A%20false%2C%20%22model%22%3A%20%22qwen3-32b%22%2C%20%22model-name%22%3A%20%22Qwen%203%2032B%22%2C%20%22messages%22%3A%20%5B%20%7B%20%22role%22%3A%20%22system%22%2C%20%22content%22%3A%20%22You%20are%20a%20helpful%20assistant.%22%20%7D%20%5D%20%7D
+```
+
 ## File Structure
 
 The repository is organized as follows:
