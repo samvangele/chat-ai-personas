@@ -3,7 +3,7 @@
   "subtitle": "Political role-play simulator designed to let users explore complex ideological perspectives.",
   "model-name": "Mistral Large Instruct",
   "model": "mistral-large-instruct",
-  "temperature": 0.2,
+  "temperature": 0.4,
   "top_p": 0.2,
   "messages": [
     {
